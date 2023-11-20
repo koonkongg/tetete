@@ -737,33 +737,6 @@ local exec = tostring(identifyexecutor())
 local Window = Uilib.new(true, "[Arpon_V2] Anime Adventures UPD "..version.." - "..exec)
 Window.ChangeToggleKey(Enum.KeyCode.P)
 
-local Home = Window:Category("🏠 Home")
-local Developers = Home:Sector("Anime Adventures")
-local asdasd = Home:Sector(" ")
-local UIUPDT = Home:Sector("⚙️ Challenge Config ⚙️")
-
-
-local Farm = Window:Category("🤖 Auto Farm")
-local SelectUnits = Farm:Sector("🧙‍ Select Units")
-local SelectWorld = Farm:Sector("🌏 Select World")
-local UnitPosition = Farm:Sector("🧙 Select Unit Position")
-local castleconfig = Farm:Sector("🏯 Infinity Castle 🏯")
-local AutoFarmConfig = Farm:Sector("⚙️ Auto Farm Config")
-local ChallengeConfig = Farm:Sector("⌛ Challenge Config")
-
-
-local UC = Window:Category("🧙 Unit Config")
-local NDY = UC:Sector("Beta Unit Config ")
-local NDY2 = UC:Sector(" ")
-local emptyxx = UC:Sector(" ")
-local emptyxx2 = UC:Sector(" ")
-local Unit1 = UC:Sector("Unit 1")
-local Unit2 = UC:Sector("Unit 2")
-local Unit3 = UC:Sector("Unit 3")
-local Unit4 = UC:Sector("Unit 4")
-local Unit5 = UC:Sector("Unit 5")
-local Unit6 = UC:Sector("Unit 6")
-
 --- Unit AOE
 local UA = Window:Category("⚔️ INF Range")
 
@@ -779,11 +752,8 @@ local UnitAOE1 = UA:Sector("Check Unit ")
 local LG = Window:Category("🛠️ Misc [BETA]")
 local LowCPU2 = LG:Sector("Low CPU Mode")
 local LowCPU3 = LG:Sector("")
-local LG1 = LG:Sector("Beta LAGGY Config ")
 local DELMAP = LG:Sector("🗺️ New Function 🗺️")
 local DELMAP1 = LG:Sector(" ")
-local OtherSec = LG:Sector("⌛ Auto Load Script ⌛")
-local OtherSec1 = LG:Sector("")
 local OtherSec3 = LG:Sector("🐱 Hide Name Player 🐱")
 local DelMapConfig = LG:Sector("")
 local DelMapConfig2 = LG:Sector("⚙️ Other Config ⚙️")
@@ -791,18 +761,8 @@ local DelMapConfig3 = LG:Sector("")
 
 
 local ETC = Window:Category("🌐 Discord & Shop")
-local AutoSummonSec = ETC:Sector("💸 Auto Summon Units 💸")
-local AutoSnipeMerchantSec = ETC:Sector("🏪 Auto Snipe Bulma 🏪")
 local WebhookSec = ETC:Sector("🌐 Discord Webhook 🌐")
 local OtherSec2 = ETC:Sector("")
-
-local Summer = Window:Category("🦸🏽 Event & Skin ")
-local SummerItem = Summer:Sector("💸 Auto Buy Summer Item 💸")
-local SellPortals = Summer:Sector("🌀 Sell Portals 🌀")
-local SummerSkin = Summer:Sector("💸 Auto Sell Events Skin 💸")
-local SummerSkin0 = Summer:Sector("")
-local SummerEgg = Summer:Sector("🥚 Auto Open Events Egg 🥚")
-
 
 ----------------------------------------------
 ---------------- Units Selection -------------

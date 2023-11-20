@@ -121,8 +121,8 @@ for i,v in pairs(get_Units_Owner()) do
         Table_All_Items_Old_data[v["unit_id"]]['Count Shiny'] = Table_All_Items_Old_data[v["unit_id"]]['Count Shiny'] + 1
     end
 end
-if game.Players.LocalPlayer._stats:FindFirstChild("_resourceCandies") then
-    CandiesOld = game.Players.LocalPlayer._stats._resourceCandies.Value
+if game.Players.LocalPlayer._stats:FindFirstChild("_resourceSummerPearls") then
+    SummerPearlsOld = game.Players.LocalPlayer._stats._resourceSummerPearls.Value
 end
 ----------------Map & ID Map
 local function GetCurrentLevelId()
@@ -219,8 +219,8 @@ function webhook()
         gems = ResultHolder:FindFirstChild("LevelRewards"):FindFirstChild("ScrollingFrame"):FindFirstChild("GemReward"):FindFirstChild("Main"):FindFirstChild("Amount").Text
         if gems == "+99999" then gems = "+0" end	 
 
-        if game.Players.LocalPlayer._stats:FindFirstChild("_resourceCandies") then
-            Candies = game.Players.LocalPlayer._stats._resourceCandies.Value
+        if game.Players.LocalPlayer._stats:FindFirstChild("_resourceSummerPearls") then
+            SummerPearls = game.Players.LocalPlayer._stats._resourceSummerPearls.Value
         end
 
         xpx = ResultHolder:FindFirstChild("LevelRewards"):FindFirstChild("ScrollingFrame"):FindFirstChild("XPReward"):FindFirstChild("Main"):FindFirstChild("Amount").Text
@@ -373,7 +373,6 @@ function webhook()
                     }
                 }
             }
-        }
         local porn = game:GetService("HttpService"):JSONEncode(data)
         local headers = {["content-type"] = "application/json"}
         local request = http_request or request or HttpPost or syn.request or http.request
@@ -737,6 +736,7 @@ local exec = tostring(identifyexecutor())
 local Window = Uilib.new(true, "[Arpon_V2] Anime Adventures UPD "..version.." - "..exec)
 Window.ChangeToggleKey(Enum.KeyCode.P)
 
+local Home = Window:Category("🏠 Home")
 --- Unit AOE
 local UA = Window:Category("⚔️ INF Range")
 
@@ -752,8 +752,11 @@ local UnitAOE1 = UA:Sector("Check Unit ")
 local LG = Window:Category("🛠️ Misc [BETA]")
 local LowCPU2 = LG:Sector("Low CPU Mode")
 local LowCPU3 = LG:Sector("")
+local LG1 = LG:Sector("Beta LAGGY Config ")
 local DELMAP = LG:Sector("🗺️ New Function 🗺️")
 local DELMAP1 = LG:Sector(" ")
+local OtherSec = LG:Sector("⌛ Auto Load Script ⌛")
+local OtherSec1 = LG:Sector("")
 local OtherSec3 = LG:Sector("🐱 Hide Name Player 🐱")
 local DelMapConfig = LG:Sector("")
 local DelMapConfig2 = LG:Sector("⚙️ Other Config ⚙️")
@@ -3466,7 +3469,7 @@ task.spawn(function()
                                                 ..tostring(comma_value(game.Players.LocalPlayer._stats.gem_amount.Value)).. " 💎\nCurrent Trophies : "
                                                 ..tostring(comma_value(game.Players.LocalPlayer._stats.trophies.Value)).. " 🏆\nCurrent Portal : "
                                                 ..tostring(CountPortal_list) .." 🌀\nCurrent Summer Pearls : "
-                                                ..tostring(comma_value(game.Players.LocalPlayer._stats._resourceCandies.Value)).. " 🦪```",
+                                                ..tostring(comma_value(game.Players.LocalPlayer._stats._resourceSummerPearls.Value)).. " 🦪```",
                                 },
                                 {
                                     ["name"] ="Skins Drop :",
